@@ -15,7 +15,7 @@ public class AssignMapper extends Mapper<LongWritable, Text, Text, IntWritable> 
 	public void map(LongWritable key, Text value, Context context) 
 			throws IOException, InterruptedException {
 		String[] data=value.toString().split("\t");
-		outKey.set(data[0]);
+		outKey.set(data[1]); // For the second task replace with outKey.set(data[0]); 
 			context.write(outKey,outValue);
 	
 			
